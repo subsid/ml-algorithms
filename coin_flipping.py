@@ -11,7 +11,7 @@ frequencies = np.array([0, 0, 0])
 random_integers = np.random.random_integers(0, 999, total_iters)
 
 for i in range(total_iters):
-    array = np.random.random_integers(0,1,(1000, 10)).sum(1)
+    array = np.random.randint(0,2,(1000, 10), dtype=np.bool).sum(1)
     c_first_freq_sum += array[0]
     c_rand_freq_sum += array[random_integers[i]]
     c_min_freq_sum += array.min()
